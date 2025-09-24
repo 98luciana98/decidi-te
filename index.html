@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>decidi☕</title>
+<!-- Favicon -->
+<link rel="icon" href="./favicon.png?v=2" type="image/png" sizes="32x32">
+<link rel="alternate icon" href="./favicon.ico">
+
+
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="header">
+        <h1 class="title">decidi🍵</h1>
+        <p class="subtitle">agregá 2 o más opciones,  la página mezcla y decide por vos</p>
+      </header>
+
+      <section class="card" aria-labelledby="opciones-title">
+        <h2 id="opciones-title" class="sr-only">opciones</h2>
+
+        <form id="form" class="row" autocomplete="off">
+          <label for="texto" class="sr-only">nueva opción</label>
+          <input
+            id="texto"
+            name="texto"
+            type="text"
+            placeholder="ej: pizza, karen, ensalada, empanadas…"
+            minlength="1"
+            class="input"
+            required
+          />
+          <button type="submit" class="btn">agregar</button>
+        </form>
+
+        <ul id="lista" class="chips" aria-live="polite" aria-label="lista de opciones"></ul>
+
+        <div class="actions">
+          <button id="mezclarBtn" class="btn btn-secondary" type="button" title="mezclar el orden">barajen bien</button>
+          <button id="decidirBtn" class="btn btn-primary" type="button" title="elegir una al azar">decidir</button>
+          <button id="limpiarBtn" class="btn btn-ghost" type="button" title="que todo vuelva a cero">borrar todo</button>
+        </div>
+
+        <output id="resultado" class="result" role="status" aria-live="assertive"></output>
+      </section>
+
+      <footer class="footer">
+
+        <small>⚠️ No me hago responsable de las decisiones tomadas con esta herramienta. Usala con humor.</small>
+      </footer>
+    </main>
+  </body>
+</html>
