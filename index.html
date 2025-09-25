@@ -4,46 +4,50 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>decidi☕</title>
+    <title>Decidi-te☕</title>
 <!-- Favicon -->
 <link rel="icon" href="./favicon.png?v=2" type="image/png" sizes="32x32">
 <link rel="alternate icon" href="./favicon.ico">
 
 
     <link rel="stylesheet" href="styles.css" />
-    <script defer src="app.js"></script>
+    <script defer src="app.js"></script> 
   </head>
   <body>
     <main class="wrap">
       <header class="header">
-        <h1 class="title">decidi🍵</h1>
-        <p class="subtitle">agregá 2 o más opciones,  la página mezcla y decide por vos</p>
+        <h1 class="title">Decidi-te☕</h1>
+        <h2 class="h2">Si tenés dudas sobre qué comer, qué color de remera ponerte o si hablarle de nuevo...</h2>
+        <p class="subtitle">Agregá 2 o más opciones, la página mezcla y decide por vos.</p>
       </header>
 
       <section class="card" aria-labelledby="opciones-title">
-        <h2 id="opciones-title" class="sr-only">opciones</h2>
+        <h2 id="opciones-title" class="sr-only">Opciones.</h2>
 
-        <form id="form" class="row" autocomplete="off">
-          <label for="texto" class="sr-only">nueva opción</label>
+        <form id="form" class="row" autocomplete="off" >
+          <label for="texto" class="sr-only">Nueva opción.</label>
           <input
             id="texto"
             name="texto"
             type="text"
-            placeholder="ej: pizza, karen, ensalada, empanadas…"
+            placeholder="Ej: Pizza, Maria, Fernet, Florencia, Empanadas, Todo, Nada..."
             minlength="1"
             class="input"
             required
           />
-          <button type="submit" class="btn">agregar</button>
+          
+
+          <button type="submit" class="btn">Agregar</button>
         </form>
 
         <ul id="lista" class="chips" aria-live="polite" aria-label="lista de opciones"></ul>
 
         <div class="actions">
-          <button id="mezclarBtn" class="btn btn-secondary" type="button" title="mezclar el orden">barajen bien</button>
-          <button id="decidirBtn" class="btn btn-primary" type="button" title="elegir una al azar">decidir</button>
-          <button id="limpiarBtn" class="btn btn-ghost" type="button" title="que todo vuelva a cero">borrar todo</button>
+          <button id="mezclarBtn" class="btn btn-secondary" type="button" title="Mezclar el orden de las opciones">  <img src="barajen-bien.png" alt="Meme barajen bien" class="img-gatite">barajen bien</button>
+          <button id="decidirBtn" class="btn btn-primary" type="button" title="Elegir una opción al azar">    ELEGIR        </button>
+          <button id="limpiarBtn" class="btn btn-ghost" type="button" title="Que todo empiece de nuevo, sin rastros de lo anterior">Borrar todo</button>
         </div>
+        
 
         <output id="resultado" class="result" role="status" aria-live="assertive"></output>
       </section>

@@ -15,10 +15,14 @@ let opciones = load() || [];
 render();
 
 // ---- eventos
+
 $form.addEventListener("submit", (e) => {
   e.preventDefault();
   const val = $input.value.trim();
   if (!val) return;
+
+
+
 
   // se evita duplicados (insensible a mayúsculas)
   const exists = opciones.some(o => o.toLowerCase() === val.toLowerCase());
@@ -32,14 +36,14 @@ $form.addEventListener("submit", (e) => {
 });
 
 $mezclar.addEventListener("click", () => {
-  if (opciones.length < 2) return pulseResult("agregá al menos 2");
+  if (opciones.length < 2) return pulseResult("Agregá minimo 2 opciones");
   shuffle(opciones);
   save(opciones);
   render(true);
 });
 
 $decidir.addEventListener("click", () => {
-  if (opciones.length < 2) return pulseResult("agregá al menos 2");
+  if (opciones.length < 2) return pulseResult("Agregá minimo 2 opciones");
 
   // pequeña "animación" de barajar antes de elegir "barajen bien"
   const clones = [...opciones];
@@ -51,7 +55,7 @@ $decidir.addEventListener("click", () => {
     if (ticks <= 0) {
       clearInterval(ticker);
       const elegido = randomOf(opciones);
-      showResult("→ " + elegido);
+      showResult("➳  " + elegido); // sale la flechita antes del resultado
     }
   }, 60);
 });
@@ -71,7 +75,7 @@ function render(reordered = false) {
     li.className = "chip";
     li.innerHTML = `
       <span>${escapeHTML(txt)}</span>
-      <button type="button" aria-label="quitar ${escapeHTML(txt)}" title="quitar">✕</button>
+      <button type="button" aria-label="Eliminar ${escapeHTML(txt)}" title="Eliminar">✕</button>
     `;
     li.querySelector("button").addEventListener("click", () => {
       opciones.splice(i, 1);
@@ -100,7 +104,7 @@ function showResult(text) {
 
 function pulseResult(text) {
   showResult(text);
-  $resultado.style.transform = "scale(1.03)";
+  $resultado.style.transform = "scale(1.00)";
   setTimeout(() => ($resultado.style.transform = ""), 120);
 }
 
