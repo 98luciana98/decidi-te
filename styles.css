@@ -3,8 +3,8 @@
   --card: #12141a;
   --text: #e9ecf1;
   --muted: #9aa3af;
-  --accent: #768df4;      /* verde suave */
-  --accent-2:#cfaaf1;     /* celestito */
+  --accent: #768df4; /*cambié colores */
+  --accent-2:#cfaaf1;     
   --ring: #ffffff33;
   --chip: #1b1f2a;
   --danger:#fca5a5;
@@ -79,7 +79,7 @@ header h2{
   border: 1px solid var(--ring);
   background: #ffffff08;
   color: var(--text);
-  padding: 16px 28px; /* ↑ más alto y más ancho */
+  padding: 16px 28px; 
   border-radius: 12px;
   cursor: pointer;
   transition: transform .04s ease, background .2s ease, border-color .2s ease;
@@ -87,7 +87,7 @@ header h2{
     font-family: 'Baloo 2', system-ui, sans-serif;
   font-weight: 600;
   letter-spacing: 0.5px;  /* un poco más de espacio */
-  text-transform: uppercase; /* opcional, más “punchy” */
+  text-transform: uppercase; 
 }
 .btn:hover{ transform: translateY(-1px); }
 .btn:active{ transform: translateY(0); }
