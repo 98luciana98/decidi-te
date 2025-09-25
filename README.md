@@ -1,3 +1,3 @@
-Accedé a DECIDI🍵
+<h1>Accedé a Decidi-te ☕</h1>
 
-Link para probarla [Ingresá](https://98luciana98.github.io/decidi-te/)
+[Ingresá](https://98luciana98.github.io/decidi-te/){:target="_blank"}
